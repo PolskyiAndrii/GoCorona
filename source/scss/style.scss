@@ -3,7 +3,6 @@
 // </ПОДКЛЮЧЕНИЯ ФАЙЛА ОБНУЛЯЮЩИХ СТИЛЕЙ> =====================================================================================================================================================================================================================
 
 // <ПОДКЛЮЧЕНИЯ ШРИФТОВ> ====================================================================================================================================================================================
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&family=Rubik:wght@400;700&display=swap');
 // </ПОДКЛЮЧЕНИЯ ШРИФТОВ> =========================================================================================================================================================================================
 
@@ -36,9 +35,23 @@ body {
 }
 
 
-[class*="__conteiner"] { 			// это селектор класса - чисто прикол для интереса
-	max-width: 1057px;
+[class*="__conteiner"] { 			// это селектор класса 
+	max-width: 1087px;
 	margin: 0px auto;
+	padding: 0px 15px;
+	// ------ for PC ------
+	@media (max-width: 1087px) {
+		max-width: 970px;
+	}
+	// ------ for TABLET ------
+	@media (max-width: 991.98px) {
+		max-width: 750px;
+	}
+	// ------ for MOBILE ------
+	@media (max-width: 767.98px) {
+		max-width: none;
+	}
+
 }
 
 
@@ -47,6 +60,86 @@ body {
 
 // <ОСНОВНОЙ БЛОК> ================================================================================================================================================================================================================
 // <ШАПКА> ========================================================================================================================================================================================================================
+.header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+
+	&__conteiner {
+		display: flex;
+		align-items: center;
+		min-height: 114px;
+	}
+
+	&__logo {
+	}
+
+	&__menu {
+		flex: 1 1 auto;
+	}
+
+	&__button {
+		flex: 0 0 252px;
+		display: flex;
+		justify-content: flex-end;
+		// ------ for TABLET ------
+		@media (max-width: 991.98px) {
+			flex: 0 0 150px;
+		}
+	
+	}
+}
+.menu {
+	display: flex;
+	justify-content: flex-end;
+
+	&__list {	
+		display: flex;
+	}
+
+	&__item {
+		margin: 0px 40px 0px 0px;
+		// ------ for TABLET ------
+		@media (max-width: 991.98px) {
+			margin: 0px 30px 0px 0px;
+		}
+		
+	}
+
+	&__link {
+		font-family: 'Raleway', sans-serif;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 10px;
+		line-height: calc(12 / 10 * 100%);
+		letter-spacing: 1px;
+		color: #000000;		
+	}
+}
+.button {
+	display: inline-block;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+	font-size: 10px;
+	line-height: calc(12 / 10 * 100%);
+	letter-spacing: 1px;
+	color: #FCFDFE;
+	border-radius: 5px;
+	padding: 14px 30px;
+	background-color: #EC5863;
+	transition: background-color 0.3s ease 0s;
+	&:hover {
+		background-color: #c44951;
+	}
+}
+.button-blue {
+	background-color: #4285F4;
+	&:hover {
+		background-color: #3871cc;
+	}
+}
 
 
 
