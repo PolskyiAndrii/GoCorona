@@ -55,7 +55,9 @@ body {
 }
 
 .blok-text {
-
+	&__center {
+		text-align: center;
+	}
 	&__tittle {
 		font-weight: 700;
 		font-size: 44px;
@@ -83,12 +85,13 @@ body {
 		letter-spacing: 1px;
 		&:not(:last-child) {margin: 0px 0px 24px 0px;}
 	}
-
+	&__text-mw {
+		max-width: 600px;
+		margin: 0px auto;
+	}
 	&__button {
 	}
 }
-
-
 
 
 // </ОСНОВНЫЕ КЛАССЫ> ================================================================================================================================================================================================================
@@ -681,7 +684,147 @@ body {
 	}
 }
 
+// ====== HEALTHCARE ========================================================================================================================================================================================================================
 
+.healthcare {
+	padding: 80px 0px 70px 0px;
+	// ------ for TABLET ------
+	@media (max-width: 991.98px) {
+		padding: 40px 0px 40px 0px;
+	}
+
+	&__conteiner {
+	}
+
+	&__blok-text {
+		margin: 0px 0px 46px 0px;
+
+	}
+
+	&__items {
+		display: flex;
+		// ------ for TABLET ------
+		@media (max-width: 991.98px) {
+			flex-direction: column;
+		}
+
+	}
+	
+	&__colomn {
+		padding: 0px 35px;
+		flex: 0 1 33.3333%;
+		position: relative;
+		z-index: 2;
+		// ------ for PC ------
+		@media (max-width: 1087px) {
+			padding: 0px 15px;
+		}
+		// ------ for TABLET ------
+		@media (max-width: 991.98px) {
+			padding: 0px;
+			&:not(:last-child) {
+				margin: 0px 0px 30px 0px;
+			}
+		}
+		
+	}
+	
+	&__colomn-1 {
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: 0;
+			background: #EC5863;
+		}
+		&::before {
+			border-radius: 16px;
+			width: 65px;
+			height: 65px;
+			left: 15px;
+			bottom: -35px;
+			transform: rotate(-30deg);
+		}
+		&::after {
+			border-radius: 30px;
+			width: 96px;
+			height: 96px;
+			left: 270px;
+			top: 31px;
+			transform: rotate(105deg);
+		}
+	}
+	
+	&__colomn-2 {
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: 0;
+			background: #EC5863;
+			border-radius: 30px;
+			width: 127px;
+			height: 127px;
+			right: -40px;
+			bottom: -30px;
+			transform: rotate(-30deg);		
+		}
+	}
+	
+	&__colomn-3 {
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: 0;
+			background: #EC5863;
+			border-radius: 16px;
+			width: 65px;
+			height: 65px;
+			right: 5px;
+			top: -28px;
+			transform: rotate(-30deg);		
+		}
+	}
+
+	&__item {
+		
+	}
+}
+
+.item-healthcare {
+	height: 100%;
+	padding: 35px 20px;
+	box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	background-color: #fff;
+	position: relative;
+	z-index: 2;
+		
+	&__icon {
+		&:not(:last-child) {
+			margin: 0px 0px 58px 0px;
+		}
+	}
+
+	&__tittle {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 138.5%;
+		letter-spacing: 1px;
+		color: #000000;
+		&:not(:last-child) {
+			margin: 0px 0px 5px 0px;
+		}
+	}
+
+	&__text {
+		line-height: 138.5%;
+		letter-spacing: 1px;
+	}
+}
 
 
 
@@ -689,9 +832,32 @@ body {
 // ====== FOOTER ========================================================================================================================================================================================================================
 
 .footer {
-	text-align: center;
-	background-color: #9365dd;
-	padding: 20px 0px;
+
+	&__conteiner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		// ------ for MOBILE SMALL ------
+		@media (max-width: 479.98px) {
+			flex-direction: column;
+		}
+
+	}
+
+	&__item {
+		padding: 0px 20px;
+		// ------ for MOBILE SMALL ------
+		@media (max-width: 479.98px) {
+			padding: 0px 20px;
+			&:not(:last-child) {
+				margin: 0px 0px 20px 0px;
+			}
+		}
+	}
+
+	&__icon {
+		max-width: 100%;
+	}
 }
 
 // </MAIN BLOK> ================================================================================================================================================================================================================

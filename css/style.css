@@ -122,6 +122,10 @@ body {
   }
 }
 
+.blok-text__center {
+  text-align: center;
+}
+
 .blok-text__tittle {
   font-weight: 700;
   font-size: 44px;
@@ -154,6 +158,11 @@ body {
 
 .blok-text__text:not(:last-child) {
   margin: 0px 0px 24px 0px;
+}
+
+.blok-text__text-mw {
+  max-width: 600px;
+  margin: 0px auto;
 }
 
 .header {
@@ -916,8 +925,195 @@ body {
   text-transform: uppercase;
 }
 
-.footer {
+.healthcare {
+  padding: 80px 0px 70px 0px;
+}
+
+@media (max-width: 991.98px) {
+  .healthcare {
+    padding: 40px 0px 40px 0px;
+  }
+}
+
+.healthcare__blok-text {
+  margin: 0px 0px 46px 0px;
+}
+
+.healthcare__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 991.98px) {
+  .healthcare__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.healthcare__colomn {
+  padding: 0px 35px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.3333%;
+          flex: 0 1 33.3333%;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 1087px) {
+  .healthcare__colomn {
+    padding: 0px 15px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .healthcare__colomn {
+    padding: 0px;
+  }
+  .healthcare__colomn:not(:last-child) {
+    margin: 0px 0px 30px 0px;
+  }
+}
+
+.healthcare__colomn-1::before, .healthcare__colomn-1::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  background: #EC5863;
+}
+
+.healthcare__colomn-1::before {
+  border-radius: 16px;
+  width: 65px;
+  height: 65px;
+  left: 15px;
+  bottom: -35px;
+  -webkit-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.healthcare__colomn-1::after {
+  border-radius: 30px;
+  width: 96px;
+  height: 96px;
+  left: 270px;
+  top: 31px;
+  -webkit-transform: rotate(105deg);
+      -ms-transform: rotate(105deg);
+          transform: rotate(105deg);
+}
+
+.healthcare__colomn-2::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  background: #EC5863;
+  border-radius: 30px;
+  width: 127px;
+  height: 127px;
+  right: -40px;
+  bottom: -30px;
+  -webkit-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.healthcare__colomn-3::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  background: #EC5863;
+  border-radius: 16px;
+  width: 65px;
+  height: 65px;
+  right: 5px;
+  top: -28px;
+  -webkit-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.item-healthcare {
+  height: 100%;
+  padding: 35px 20px;
+  -webkit-box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+          box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
-  background-color: #9365dd;
-  padding: 20px 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.item-healthcare__icon:not(:last-child) {
+  margin: 0px 0px 58px 0px;
+}
+
+.item-healthcare__tittle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 138.5%;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+.item-healthcare__tittle:not(:last-child) {
+  margin: 0px 0px 5px 0px;
+}
+
+.item-healthcare__text {
+  line-height: 138.5%;
+  letter-spacing: 1px;
+}
+
+.footer__conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 479.98px) {
+  .footer__conteiner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer__item {
+  padding: 0px 20px;
+}
+
+@media (max-width: 479.98px) {
+  .footer__item {
+    padding: 0px 20px;
+  }
+  .footer__item:not(:last-child) {
+    margin: 0px 0px 20px 0px;
+  }
+}
+
+.footer__icon {
+  max-width: 100%;
 }
